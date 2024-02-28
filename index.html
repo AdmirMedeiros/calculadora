@@ -1,0 +1,57 @@
+<html>
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aprendendo Sobre a DOM</h1>
+    <div></div>
+    <p name="texto-interno">Exemplo de testo interno</p>
+    <p name="texto-interno">Segundo de testo interno</p>
+
+    <P class="class-infinity">Paragrafo com uma classe</P>
+
+    <p id="texto">Paragrafo com um id</p>
+
+
+    <h2>Exemplo 1</h2>
+    <h2 class="infinity">Exemplo 2</h2>
+    <h2 id="id-infinity">Exemplo 3</h2>
+
+    <script>
+        const h2 = document.querySelector('h2')
+        h2.innerText = "Alterado via querySelector"
+
+        const h2Class = document.querySelector('.infinity')
+        h2Class.innerText = "Alterado via querySelector .infinity"
+
+        const h2Id = document.querySelector('#id-infinity')
+        h2Id.innerText = "Alterado via querySelector #id-infinity"
+
+
+        const pId = document.getElementById('texto')
+        console.log(pId)
+        pId.innerText = "Paragrafo com id alterado via javascript"
+
+
+
+
+        const pClass = document.getElementsByClassName("class-infinity")
+        console.log(pClass)
+
+        pClass[0].innerText = "Texto alterado via javascript"
+        
+
+
+        const h1 = document.getElementsByTagName('h1')
+        console.log(h1)
+
+        const paragrafos = document.getElementsByName('texto-interno')
+        console.log(paragrafos)
+
+        //mudando texto interno de um elemento
+
+        paragrafos[0].innerText = 'Infinity school'
+        paragrafos[1].innerText = 'Turma DFS 319'
+    </script>
+</body>
+</html>
